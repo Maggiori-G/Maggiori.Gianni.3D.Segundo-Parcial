@@ -39,6 +39,14 @@
       "alias": "flash",
       "editorial": "dc",
       "arma": "Armadura"
+    },
+    {
+      "id": 1689369089335,
+      "nombre": "clark kent",
+      "fuerza": 1329,
+      "alias": "superman",
+      "editorial": "dc",
+      "arma": "Espada"
     }
   ],
   "armas": [
