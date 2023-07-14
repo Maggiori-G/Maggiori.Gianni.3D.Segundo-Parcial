@@ -1,0 +1,277 @@
+main{
+    background-image: url(../Imagenes/fondo.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: 100%;
+    background-position: 100%;
+    margin: 0;
+    font-size: 14px;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+}
+html, body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: darkred;
+    /* border: 3px solid darkred; */
+}
+
+.footer{
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    background-color: darkgray;
+    /* margin: 0 auto; */
+    justify-content: space-between;
+    /* margin-top: 15px; */
+}
+
+.header{
+    background-image: url(../Imagenes/header.jpg);
+    background-repeat: no-repeat;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 auto;
+    margin : 0;
+}
+
+.header img{
+    width: 170px;
+    height: 170px;
+}
+
+.header h1{
+    margin: 0 auto;
+    justify-content: center;
+}
+
+main{
+    /* padding: 25px 10px; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.contenedor-principal{
+    display: flex;
+    flex-direction: row;
+}
+
+.seccion-titulo {
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+legend{
+    font-size: 20px;
+    text-align: center;
+}
+
+.abm{
+    display: flex;
+    flex-direction: row;
+}
+
+label{
+    display: flex;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.abm img{
+    width: 35px;
+    height: 20px;
+}
+
+#table{
+    width: 100%;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+input{
+    cursor: pointer;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+tr{
+    height: 30px;
+    width: 30%;
+}
+
+th{
+    text-transform: capitalize;
+    background-color: aqua;
+    align-items: center;
+}
+
+td{
+    text-align: center;
+    align-items: center;
+}
+
+tr:hover{
+    background-color: lightblue;
+    text-decoration: underline;
+}
+
+.spinner{
+    position: relative;
+    border: 6px solid rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    display: none; 
+    animation: girar 1s ease infinite;
+    margin-bottom: 30%;
+
+}
+
+@keyframes girar{
+    0%{
+      transform: rotate(0deg);
+    }
+  
+    100%{
+      transform: rotate(360deg);
+    }
+}
+
+.header img{
+    padding-left: 15px;
+}
+
+.header nav{
+    padding-right: 35px;
+    position: relative;
+    text-align: right;
+}
+
+.header nav li{
+    display: block;
+    text-align: left;
+    margin: 0 0 0 15px;
+    padding: 5px 10px;
+}
+
+.header nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+body h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.seccion-titulo img{
+    width: 100%;
+    height: 200px;
+}
+
+.botones input{
+    font-weight: bold;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.footer nav{
+    position: relative;
+    text-align: left;
+}
+
+.footer nav li{
+    display: inline;
+    text-align: left;
+    margin: 0 0 0 15px;
+    padding: 5px 10px;
+}
+
+.footer nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer nav a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.footer p{
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: right;
+    font-size: 15px;
+}
+
+.botones-con-iconos{
+    display: flex;
+    flex-direction: row;
+}
+
+.botones-con-iconos input{
+    width: 100%;
+    height: 16px;
+}
+
+.botones-con-iconos img{
+    width: 30px;
+    height: 35px;
+    padding-right: 10px;
+}
+
+.card{
+    background-image: url(../Imagenes/fondo.jpg);
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img{
+    width: 35px;
+    height: 35px;
+}
+
+.tarjeta{
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 23%;
+}
+
+.tarjeta p{
+    justify-content: center;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.tarjeta span{
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+}
+
+

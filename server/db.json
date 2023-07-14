@@ -1,0 +1,52 @@
+{
+  "superheroes": [
+    {
+      "id": 1688780573770,
+      "nombre": "Bruce Banner",
+      "fuerza": 1357,
+      "alias": "Hulk",
+      "editorial": "marvel",
+      "arma": "Armadura"
+    },
+    {
+      "id": 1688780637286,
+      "nombre": "Tony Stark",
+      "fuerza": 806,
+      "alias": "IronMan",
+      "editorial": "marvel",
+      "arma": "Armadura"
+    },
+    {
+      "id": 1688780673132,
+      "nombre": "Thor",
+      "fuerza": 754,
+      "alias": "Dios del trueno",
+      "editorial": "marvel",
+      "arma": "Martillo"
+    },
+    {
+      "id": 1688781331884,
+      "nombre": "bruce wayne",
+      "fuerza": 902,
+      "alias": "batman",
+      "editorial": "dc",
+      "arma": "Arma de Fuego"
+    },
+    {
+      "id": 1689352530530,
+      "nombre": "barry allen",
+      "fuerza": 813,
+      "alias": "flash",
+      "editorial": "dc",
+      "arma": "Armadura"
+    }
+  ],
+  "armas": [
+    "Armadura",
+    "Espada",
+    "Martillo",
+    "Escudo",
+    "Arma de Fuego",
+    "Flechas"
+  ]
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Estilos/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="./Scripts/script.js" type="module" defer></script>
+    <title>Primer Parcial Laboratorio 3</title>
+</head>
+<body>
+    <header class="header">
+        <div class="row justify-content-between">
+            <div class="col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                <img src="./Imagenes/logo.png" alt="logo_pagina">
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-5">
+                <h1 class="display-1">Segundo Parcial Laboratorio III - Maggiori, Gianni</h1>
+            </div>
+            <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                <nav>
+                    <ul class="nav" id="listaFooter">
+                        <li class="nav-item"><a class="nav-link active" href="./paginaPrincipal.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Personajes</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <div class="container">
+            <section class="seccion-titulo">
+                <h2>Crud Heroes</h2>
+            </section>
+            <div class="row">
+                <div class="col-md-4 col-lg-6 col-xl-6 col-xxl-5">
+                    <h4>Filtrar Por</h4>
+                    <div id="filtros"></div>
+                </div>
+                <div class="col-md-3 col-lg-6 col-xl-6 col-xxl-1">
+                    <div>
+                        <h4>Editorial</h4>
+                        <div id="select-editorial"></div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-8 col-xl-8 col-xxl-6">
+                    <h4>Info. Fuerza</h4>
+                    <div class="row justify-content-around">
+                        <div class="col-4">
+                            <label for="txtMaximo">Maximo:</label>
+                            <input id="maximo" type="number" name="txtMaximo" autocomplete="off" readonly style="width: 40%">
+                        </div>
+                        <div class="col-4">
+                            <label for="txtMinimo">Minimo:</label>
+                            <input id="minimo" type="number" name="txtMinimo" autocomplete="off" readonly style="width: 40%">
+                        </div>
+                        <div class="col-4">
+                            <label for="txtPromedio">Promedio:</label>
+                            <input id="promedio" type="number" name="txtPromedio" autocomplete="off" readonly style="width: 40%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 abm">
+                    <form id="formulario" style="width: 60%;">
+                        <fieldset>
+                            <legend>Información Heroe</legend>
+                            <p>
+                                <label for="txtNombre" class="form-label">Ingrese el nombre:</label>
+                                <input class="form-control" type="text" name="txtNombre" placeholder="Nombre" autocomplete="off">
+                            </p>
+                            <fieldset>
+                                <label class="form-label" style="margin-right: 30px;">Editorial:</label>
+                                <input type="radio" name="rdoEditorial" value="dc">
+                                <img src="./Imagenes/dc.png" alt="icono_dc" style="width: 40px; height: 40px">
+                                <input type="radio" name="rdoEditorial" value="marvel" checked>
+                                <img src="./Imagenes/marvel.png" alt="icono_marvel" style="width: 50px; height: 50px">
+                            </fieldset>
+                            <p>
+                                <label class="form-label" for="txtAlias">Ingrese el Alias:</label>
+                                <input class="form-control" type="text" name="txtAlias" placeholder="Alias" autocomplete="off">
+                            </p>
+                            <p>
+                                <label class="form-label" for="txtFuerza">Cantidad de fuerza:</label>
+                                <input class="form-range" type="range" min="1" max="1500" step="1" name="txtFuerza" placeholder="Fuerza" min="0">
+                            </p>
+                            <p>
+                                <label class="form-label" for="txtArmas" style="margin-right: 15px;">Tipo de Arma:</label>
+                                <select type="text"  name="txtArmas" id="seleccionArmas"></select>
+                                
+                            </p>
+                            <div class="botones">
+                                <input type="hidden" name="txtId">
+                                <input class="btn btn-info" type="button" value="Buscar">
+                                <br>
+                                <input class="btn btn-success" id="nuevo" type="submit" value="Nuevo">
+                                <br>
+                                <input class="btn btn-warning" id="cancelar" type="hidden" value="Cancelar">
+                                <br>
+                                <input class="btn btn-danger" id="eliminar" type="hidden" value="Eliminar">
+                                <br>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col-xl-6 list" >
+                    <div class="list" style="width: 100%;">
+                        <legend>Heroes Disponibles</legend>
+                        <div id="table" style="display:flex; justify-content: center; align-items: center;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="spinner" class="spinner"></div>
+    <footer class="footer">
+        <nav>
+            <ul class="nav" id="listaFooter" id="listaFooter">
+                <li class="nav-item"><a class="nav-link active" href="#">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Anuncios</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <p>Laboratorio III - Todos los derechos reservados 2023&copy;</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
